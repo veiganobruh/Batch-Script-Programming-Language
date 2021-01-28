@@ -1,0 +1,60 @@
+
+:: Configurando a exibicao do comando - sem exibicao 
+@Echo off
+
+:: Configurando o tamanho do prompt 
+Mode Con: lines=23 Cols=61
+
+:: Configurando o titulo do prompt 
+title Menu Batch - Usando CHOICE
+
+
+:: Label 
+:i
+
+:: Menu 
+cls
+Echo.
+echo	╔═══════════════════════════════════════════════════════════╗
+echo	║ ®          	   Curso de Batch Script	     ░▒▒▓▓  ║ 
+echo	╠═══════════════════════════════════════════════════════════╣
+echo	║       »»»»»» Por Favor, selecione um número ««««««        ║ 
+echo	╠═══════════════════════════════════════════════════════════╣
+echo	║ ╔═════════════════╗╔═════════════════╗╔═════════════════╗ ║	
+echo	║ ╠═════════════════╣╠═════════════════╣╠═════════════════╣ ║		
+echo	║ ║ 1: Calculadora  ║║ 2: G. Tarefas   ║║ 3: B. de Nota   ║ ║	
+echo	║ ╚═════════════════╝╚═════════════════╝╚═════════════════╝ ║		     		   
+echo	║ ╔═════════════════╗╔═════════════════╗╔═════════════════╗ ║		
+echo	║ ╠═════════════════╣╠═════════════════╣╠═════════════════╣ ║		
+echo	║ ║ 4. W. Update    ║║ 5: Paint        ║║ 6: Firefox	  ║ ║	
+echo	║ ╚═════════════════╝╚═════════════════╝╚═════════════════╝ ║
+echo    ╚═══════════════════════════════════════════════════════════╝	
+echo.
+
+:: lendo o valor digitado
+choice /c "123456" /n /m "?Digite> "
+
+:: Atraves do valor digitado pelo usuario, o mesmo eh atribuindo ao errorlevel assim redirecionado a label especifica 
+:dec
+echo Resultado: %errorlevel%
+pause >nul
+goto %errorlevel%
+
+:1
+start calc.exe
+goto i
+:2
+start taskmgr.exe
+goto i
+:3
+start notepad.exe
+goto i
+:4
+start wuapp.exe
+goto i
+:5
+start mspaint.exe
+goto i
+:6
+start firefox.exe
+goto i
