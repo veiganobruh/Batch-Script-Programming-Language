@@ -1,0 +1,7 @@
+Renomeia um ou mais arquivos.
+
+RENAME [unidade:][caminho]arquivo1 arquivo2.
+REN [unidade:][caminho]arquivo1 arquivo2.
+
+Note que você não pode especificar uma nova unidade ou caminho para o
+arquivo de destino.

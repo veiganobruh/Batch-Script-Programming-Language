@@ -1,0 +1,6 @@
+Exibe mensagens ou ativa ou desativa o eco de comando.
+
+  ECHO [ON | OFF]
+  ECHO [message]
+
+Digite ECHO sem parametros para exibir a configuração do eco atual.

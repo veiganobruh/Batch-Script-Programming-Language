@@ -1,0 +1,3 @@
+Exibe a versão do Windows.
+
+VER

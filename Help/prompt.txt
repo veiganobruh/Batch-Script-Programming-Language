@@ -1,0 +1,35 @@
+Altera o prompt de comando do cmd.exe.
+
+PROMPT [texto]
+
+  text   Especifica um novo prompt de comando.
+
+O prompt de comando pode constituir-se de caracteres normais e dos seguintes códigos especiais:
+
+  $A   & ("E" comercial)
+  $B   | (pipe)
+  $C   ( (parˆntese esquerdo)
+  $D   data atual
+  $E   c¢digo de escape (c¢digo ASCII 27)
+  $F   ) (parˆntese direito)
+  $G   > (sinal de maior que)
+  $H   BACKSPACE (elimina o caractere anterior)
+  $L   < (sinal de menor que)
+  $N   unidade atual
+  $P   unidade e caminho atual
+  $Q   = (sinal de igual)
+  $S     (espa‡o em branco)
+  $T   hora atual
+  $V   versÆo do Windows
+  $_   retorno de carro e avan‡o de linha
+  $$   $ (cifrÆo)
+
+Se as extensäes de comando estiverem ativadas, o comando PROMPT dar  suporte
+saos eguintes caracteres de formatação adicionais:
+
+  $+   zero ou mais caracteres de sinal de mais (+) dependendo da profundidade
+       da pilha de diretórios do comando PUSHD, um caractere para cada nível
+       adicionado.
+
+  $M   Exibe o nome remoto associado … letra da unidade atual ou … cadeia de
+        caracteres vazia se a unidade atual nÆo for uma unidade de rede.

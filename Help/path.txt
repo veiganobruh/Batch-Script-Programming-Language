@@ -1,0 +1,10 @@
+Exibe ou define um caminho de pesquisa para arquivos executáveis.
+
+PATH [[unidade:]caminho[;...][;%PATH%]
+PATH ;
+
+Digite PATH ; para limpar todas as configurações de caminhos de pesquisa e
+instruir cmd.exe a pesquisar apenas na pasta atual.
+Digite PATH sem parâmetros para exibir o caminho atual.
+A inclusão de %PATH% na nova configuração de caminho faz com que
+o caminho antigo seja acrescentado … nova configuração.

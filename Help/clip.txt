@@ -1,0 +1,17 @@
+
+CLIP
+
+Descrição:
+    Redireciona a saída das ferramentas de linha de comando para a área
+    de transferência do Windows.
+    Essa saìda de texto pode ser então copiada para outros programas.
+
+Lista de parametros:
+    /?                  Exibe esta mensagem de ajuda.
+
+Exemplos:
+    DIR | CLIP          Coloca uma cópia da lista do diretório atual
+                        na área de transferência do Windows.
+
+    CLIP < README.TXT   Coloca uma cópia do texto de leiame.txt
+                        na  rea de transferência do Windows.

@@ -1,0 +1,10 @@
+Exibe ou define a hora do sistema.
+
+TIME [/T | hora]
+
+Digite TIME sem parƒmetros para exibir a configura‡Æo de hora atual e poder
+digitar a nova hora. Pressione ENTER para manter a hora inalterada.
+
+Se as extensäes de comando estiverem ativadas, o comando TIME dar  suporte …
+op‡Æo /T que informa ao comando para exibir apenas a hora atual, sem solicitar
+uma nova hora.

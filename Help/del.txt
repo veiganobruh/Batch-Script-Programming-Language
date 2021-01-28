@@ -1,0 +1,25 @@
+Exclui um ou mais arquivos.
+
+DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+
+  names         Especifica uma lista de um ou mais arquivos ou diretórios.
+                Caracteres curinga podem ser usados para excluir vários arquivos. Se
+                um diretório for especificado, todos os arquivos dentro dele
+                serão excluídos.
+
+  /P            Solicita confirmação antes de excluir cada arquivo.
+  /F            Força a exclusão de arquivos somente leitura.
+  /S            Exclui arquivos especificados de todos os subdiretórios.
+  /Q            Modo silencioso, não pede confirmação para excluir com caractere curinga global
+  /A            Seleciona arquivos a serem excluídos com base nos atributos
+  attributes     R  Arquivos somente leitura        S  Arquivos do sistema
+                H  Arquivos ocultos                A  Arquivos prontos para arquivamento
+                I  Arquivos sem conte£do indexado  L  Pontos de nova an lise
+                O  Arquivos offline              -  Prefixo significando negação
+
+Se as extensões de comando estiverem ativadas, os comandos DEL e ERASE serão
+alterados como a seguir:
+
+A semântica de exibição da opção /S ‚ revertida ao mostrar
+somente os arquivos excluídos, e não os que não pôde localizar.

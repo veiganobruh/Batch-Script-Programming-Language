@@ -1,0 +1,41 @@
+Exibe uma lista de arquivos e subdiretórios em um diretório.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+              Especifica a unidade, o diretório e/ou arquivos a serem listados.
+
+  /A          Exibe arquivos com atributos especificados.
+  atributos   D  Diretórios              R  Arquivos somente leitura
+               H  Arquivos ocultos        A  Arquivos prontos para arquivamento
+               S  Arquivos de sistema     I  Arquivos sem conte£do indexado
+               L  Pontos de nova an lise             O  Arquivos offline
+               -  Prefixo significando negação
+  /B          Usa formatação básica (sem informações de cabeçalho ou resumo).
+  /C          Exibe o separador de milhar em tamanhos de arquivos.  o
+              padrão.  Use /-C para desabilitar a exibição do separador.
+  /D          O mesmo que amplo, mas os arquivos são classificados na lista por coluna.
+  /L          Usa letras minúsculas.
+  /N          Novo formato de lista longo onde os nomes de arquivos estão … extrema direita.
+  /O          Lista por arquivos na ordem classificada.
+  sortorder    N  Por nome (alfabético)       S  Por tamanho (menor primeiro)
+               E  Por extensão (alfabética)  D  Por data/hora (mais antiga primeiro)
+               G  Grupo de diretórios primeiro  -  Prefixo para inverter a ordem
+  /P          Pausa após cada tela de informações.
+  /Q          Exibe o proprietário do arquivo.
+  /R          Exibe fluxos de dados alternados do arquivo.
+  /S          Exibe os arquivos no diretório especificado e em todos os subdiretórios.
+  /T          Controla qual campo de tempo ‚ exibido ou usado na classificação
+  timefield  C  Criação
+              A  último Acesso
+              W  última Gravação
+  /W          Usa o formato de lista amplo.
+  /X          Exibe os nomes curtos gerados para nomes de arquivos
+              diferentes do formato 8.3. O formato ‚ /N com o nome curto
+              inserido antes do nome longo. Se nenhum nome curto estiver
+              presente, serão exibidos espaços no seu lugar.
+  /4          Exibe anos de quatro dígitos
+
+As opções podem estar predefinidas na variável de ambiente DIRCMD.
+Substituir nas opções predefinidas ao prefixar qualquer opção com - (hífen)--por exemplo, /-W.

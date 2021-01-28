@@ -1,0 +1,26 @@
+Exibe ou altera atributos de arquivo.
+
+ATTRIB [+R | -R] [+A | -A] [+S | -S] [+H | -H] [+O | -O] [+I | -I] [+X | -X] [+P | -P] [+U | -U]
+       [unidade:][caminho][nome_de_arquivo] [/S [/D]] [/L]
+
+  +   Define um atributo.
+  -   Limpa um atributo.
+  R   Atributo de arquivo somente leitura.
+  A   Atributo de arquivo morto.
+  S   Atributo de arquivo do sistema.
+  H   Atributo de arquivo oculto.
+  O   Atributo offline.
+  I   Atributo de arquivo sem conte£do indexado.
+  X   Sem atributo de arquivo de remoção.
+  V   Atributo de integridade.
+  P   Atributo fixado.
+  U   Atributo desafixado.
+  B   Atributo de Blob SMR.
+  [unidade:][caminho][nome_de_arquivo]
+      Especifica um ou mais arquivos para o atributo processar.
+  /S  Processa os arquivos correspondentes na pasta atual
+      e em todas as subpastas.
+  /D  Inclui pastas no processamento.
+  /L  Trabalha nos atributos do Link Simbólico versus
+      o destino do Link Simbólico
+

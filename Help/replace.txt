@@ -1,0 +1,21 @@
+Substitui arquivos.
+
+REPLACE [unidade1:][cam1]arquivo [unidade2:][cam2] [/A] [/P] [/R] [/W]
+REPLACE [unidade1:][cam1]arquivo [unidade2:][cam2] [/P] [/R] [/S] [/W] [/U]
+
+ [unidade1:][cam1]arquivo Especifica o(s) arquivo(s) de origem.
+ [unidade2:][cam2]        Especifica a pasta onde os arquivos deverão
+                          ser substituídos.
+  /A                      Adiciona novos arquivos … pasta de destino.
+                          Não podem ser usados com as opções /S ou /U.
+  /P                      Pede confirmação antes de substituir um arquivo ou
+                          de adicionar um arquivo de origem.
+  /R                      Substitui arquivos de somente leitura e arquivos
+                          sem proteção.
+  /S                      Substitui arquivos em todas as subpastas
+                          da pasta de destino. Não pode ser usado com
+                          a opção /A.
+  /W                      Espera um disco ser inserido antes de começar.
+  /U                      Substitui (atualiza) somente arquivos mais antigos
+                          que os arquivos de origem. Não pode ser usado com
+                          a opção /A.

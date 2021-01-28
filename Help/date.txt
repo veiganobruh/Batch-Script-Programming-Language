@@ -1,0 +1,10 @@
+Exibe ou define a data.
+
+DATE [/T | data]
+
+Digite DATE sem parametros para exibir a data atual e poder digitar
+a nova data. Pressione ENTER para manter a data inalterada.
+
+Se as extensäes de comando estiverem ativadas, o comando DATE dá suporte para a
+opção /T, que o instrui a exibir apenas a data atual, sem solicitar
+uma nova data.

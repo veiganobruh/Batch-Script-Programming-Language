@@ -1,0 +1,18 @@
+Configura os dispositivos do sistema.
+
+Porta serial:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]
+                                [to=on|off] [xon=on|off] [odsr=on|off]
+                                [octs=on|off] [dtr=on|off|hs]
+                                [rts=on|off|hs|tg] [idsr=on|off]
+
+Status do dispositivo:        MODE [dispositivo] [/STATUS]
+
+Redirecionar impressão:       MODE LPTn[:]=COMm[:]
+
+Selecionar página de código:  MODE CON[:] CP SELECT=yyy
+
+Status da página de código:  MODE CON[:] CP [/STATUS]
+
+Modo de exibição:             MODE CON[:] [COLS=c] [LINES=n]
+
+Velocidade de repetição:      MODE CON[:] [RATE=r DELAY=d]

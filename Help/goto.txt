@@ -1,0 +1,17 @@
+Direciona o cmd.exe para uma linha com um rótulo em um programa em lotes.
+
+GOTO rótulo
+
+  rótulo   Especifica a cadeia de caracteres de texto usada no programa em
+           lotes como um rótulo.
+
+Você deve digitar um rótulo em uma linha iniciada com dois pontos (:).
+
+Se as extensäes de comando estiverem ativadas, o GOTO será alterado como
+a seguir:
+
+O comando GOTO agora aceita um rótulo de destino de :EOF que transfere o
+controle para o final do arquivo de script em lotes atual. Essa ‚ uma forma
+fácil de sair de um arquivo de script em lotes sem definir um rótulo.
+Digite CALL /? para obter uma descrição das extensões para o comando CALL
+que tornam este recurso nútil.

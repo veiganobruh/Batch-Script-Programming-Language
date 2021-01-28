@@ -1,0 +1,12 @@
+Encerra o programa CMD.EXE (interpretador de comando) ou o script em lote
+atual.
+
+EXIT [/B] [Código_de_saída]
+
+  /B               Especifica a saída do script em lote atual em vez do
+                   CMD.EXE. Se for executado de fora de um script em lote,
+                   sair  do CMD.EXE
+
+  Código_de_saída  Especifica um número. Se /B for especificado, definir 
+                   ERRORLEVEL como esse número. Se sair do CMD.EXE, definir 
+                   o código de saída do processo como esse número.

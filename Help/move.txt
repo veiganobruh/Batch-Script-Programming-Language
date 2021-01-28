@@ -1,0 +1,28 @@
+Move e renomeia arquivos e pastas.
+
+Para mover um ou mais arquivos:
+MOVE [/Y | /-Y] [unidade:][caminho]arquivo1[,...] destino
+
+Para renomear uma pasta:
+MOVE [/Y | /-Y] [unidade:][caminho]pasta1 pasta2
+
+  [unidade:][caminho]arquivo1 Especifica o local e o nome do arquivo
+                              ou arquivos a serem movidos.
+  destino                     Especifica o novo local do arquivo. O destino
+                              pode consistir em uma letra de unidade e dois-
+                              pontos, um nome de pasta ou uma combinação.
+                              Se estiver movendo apenas um arquivo, também
+                              poder  incluir um nome de arquivo se desejar
+                              renomear o arquivo ao movê-lo.
+  [unidade:][caminho]pasta1   Especifica a pasta a ser renomeada.
+  pasta2                      Especifica o novo nome da pasta.
+
+  /Y                          Suprime o prompt para você confirmar se deseja
+                              substituir um arquivo de destino existente.
+  /-Y                         Exibe o prompt para você confirmar se deseja
+                              substituir um arquivo de destino existente.
+
+A opção /Y pode estar presente na variável de ambiente COPYCMD.
+Isso pode ser substitu¡do por /-Y na linha de comando. O padrão ‚
+exibir um prompt nas substituições a menos que o comando MOVE
+esteja sendo executado em um script em lote.

@@ -1,0 +1,106 @@
+Inicia uma janela separada para executar um programa ou comando especificado.
+
+START ["title"] [/D path] [/I] [/MIN] [/MAX] [/SEPARATE | /SHARED]
+      [/LOW | /NORMAL | /HIGH | /REALTIME | /ABOVENORMAL | /BELOWNORMAL]
+      [/NODE <n¢ de NUMA>] [/AFFINITY < m scara_afinidade_hexadecimal >] [/WAIT] [/B]
+      [comando/programa] [parƒmetros]
+
+    "title"     Título a ser exibido na barra de títulos da janela.
+    path        Diretório de início.
+    B           Inicia um aplicativo sem criar nova janela. O aplicativo tem
+                o tratamento de ^C ignorado. A menos que o aplicativo ative o
+                processamento de ^C, o comando ^Break ‚ a ínica forma de
+                interromper o aplicativo.
+    I           O novo ambiente será o ambiente original transferido para o
+                cmd.exe e não ‚ o ambiente atual.
+    MIN         Inicia a janela minimizada.
+    MAX         Inicia a janela maximizada.
+    SEPARATE    Inicia um programa do Windows de 16 bits em um espaço de memória separado.
+    SHARED      Inicia um programa do Windows de 16 bits em um espaço de memória compartilhado.
+    LOW         Inicia o aplicativo na classe de prioridade IDLE.
+    NORMAL      Inicia o aplicativo na classe de prioridade NORMAL.
+    HIGH        Inicia o aplicativo na classe de prioridade HIGH.
+    REALTIME    Inicia o aplicativo na classe de prioridade REALTIME.
+    ABOVENORMAL Inicia o aplicativo na classe de prioridade ABOVENORMAL.
+    BELOWNORMAL Inicia o aplicativo na classe de prioridade BELOWNORMAL.
+    NODE        Especifica o nó da Arquitetura de Memória Não Uniforme (NUMA)
+                com um inteiro decimal.
+    AFFINITY    Especifica a máscara de afinidade do processador com um número hexadecimal.
+                O processo está restrito a execução nesses processadores.
+
+                A máscara de afinidade ‚ interpretada de forma diferente quando /AFFINITY e
+                /NODE são combinados. Especifique a máscara de afinidade se a máscara do processador do nó NUMA for deslocada
+                para a direita para começar no bit zero.
+                O processo ‚ restrito a execução nesses processadores em
+                comum entre a máscara de afinidade especificada e o nó NUMA.
+                Se não houver processadores em comum, o processo estar  restrito a
+                execução no nó NUMA especificado.
+    WAIT        Inicia o aplicativo e espera que ele finalize o
+    comando/programa
+                Se for um comando cmd interno ou um arquivo em lotes, o
+                processador do comando ser  executado com a opção /K para cmd.exe.
+                Isso significa que a janela permanecer  depois que o
+                comando for executado.
+
+                Se não for um comando cmd interno nem um arquivo em lotes,
+                ele será um programa executado como um aplicativo em janela
+                ou um aplicativo em console.
+
+    parameters  São os parâmetros transferidos para o comando/programa.
+
+OBSERVAÇÃO: As opções SEPARATE e SHARED não são suportadas em plataformas de 64 bits.
+
+A especificação /NODE permite que sejam criados processos de uma forma que
+aproveite localidade de memória em sistemas NUMA. Por exemplo, dois processos
+que se comuniquem pesadamente um com o outro por meio de memória compartilhada podem ser criados para compartilhar o mesmo nó NUMA
+preferencial a fim de minimizar latências de memória. Eles alocam
+memória do mesmo nó NUMA, quando for poss¡vel, e ficam liberados para executar em processadores fora do nó
+especificado.
+
+    start /NODE 1 application1.exe
+    start /NODE 1 application2.exe
+
+Esses dois processos podem ser ainda mais restringidos para executar em
+processadores específicos dentro do mesmo nó NUMA. No exemplo a seguir, application1 ‚ executado
+nos dois processadores de ordem inferior do nó, enquanto application2 ‚ executado nos próximos dois
+ processadores do nó. Esse exemplo presume que o nó especificado tem no mínimo
+quatro processadores lógicos. Observe que o número do nó pode ser alterado para qualquer número de nó
+válido para aquele computador sem precisar alterar a máscara de afinidade.
+
+    start /NODE 1 /AFFINITY 0x3 application1.exe
+    start /NODE 1 /AFFINITY 0xc application2.exe
+
+Se as extensões de comando estiverem ativadas, a invocação de comando externa
+através da linha de comando ou do comando START será alterada como a seguir:
+
+Arquivos não executáveis podem ser chamados através de sua associação
+    de arquivos apenas ao digitar o nome do arquivo como um comando.
+    (e.g.  WORD.DOC iniciaria o aplicativo associado com a extensão de arquivo
+    .DOC). Consulte os comandos ASSOC e FTYPE para obter informações sobre
+    como criar essas associações a partir de um script de comando.
+
+Ao executar um aplicativo que seja um aplicativo GUI de 32 bits, o CMD.EXE
+    não espera o aplicativo terminar para voltar ao prompt de comando.
+    Esse novo comportamento NÃO ocorre se estiver sendo executado
+    a partir de um script de comando.
+
+Ao executar uma linha de comando cujo primeiro token seja a cadeia de
+    caracteres "CMD " sem uma extensão ou qualificador de caminhos, o "CMD"
+    ‚ substitu¡do pelo valor da variável COMSPEC. Isso evita selecionar o *
+    CMD.EXE na pasta atual.
+
+Ao executar uma linha de comando cujo primeiro token NÃO contenha uma
+    extensão, o CMD.EXE usar  o valor da variável de ambiente PATHEXT
+    para determinar quais extensões serão procuradas e em que ordem.
+    O valor padrão da variável PATHEXT ‚:
+
+        .COM;.EXE;.BAT;.CMD
+
+    Observe que a sintaxe ‚ a mesma da variável PATH, com
+    ponto-e-vírgula separando os diferentes elementos.
+
+Ao procurar por um executável, se não houver correspondência em nenhuma
+extensão, ele verifica se o nome corresponde a um nome de pasta.
+Se corresponder, o comando START inicia o Explorer nesse caminho.
+Se for feito a partir da linha de comando, será o equivalente a fazer CD /D
+ para esse caminho.

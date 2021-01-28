@@ -1,0 +1,30 @@
+Edita linhas de comando, recupera comandos do Windows e cria macros.
+
+DOSKEY [/REINSTALL] [/LISTSIZE=tamanho] [/MACROS[:ALL | :execut vel]]
+  [/HISTORY] [/INSERT | /OVERSTRIKE] [/EXENAME=execut vel]
+  [/MACROFILE=arquivo] [nome_macro=[texto]]
+
+  /REINSTALL          Instala uma nova cópia de Doskey.
+  /LISTSIZE=tamanho   Define o tamanho do buffer de histórico de comandos.
+  /MACROS             Exibe todas as macros de Doskey.
+  /MACROS:ALL         Exibe todas as macros de Doskey de todos os
+                      executáveis que tenham macros de Doskey.
+  /MACROS:execut vel  Exibe todas as macros de Doskey do executável.
+  /HISTORY            Exibe todos os comandos armazenados na memória.
+  /INSERT             Especifica que o novo texto ‚ inserido no texto
+                      anterior.
+  /OVERSTRIKE         Especifica que o novo texto substitui o texto anterior.
+  /EXENAME=executável Especifica o executável.
+  /MACROFILE=arquivo  Especifica um arquivo de macros para instalar.
+  nome_macro          Especifica o nome de uma macro criada.
+  texto               Especifica comandos que você deseja gravar.
+
+Setas PARA CIMA e PARA BAIXO recuperam comandos; ESC limpa a linha de comando;
+F7 exibe o histórico de comandos; ALT+F7 limpa o histórico de comandos;
+F8 pesquisa o histórico de comandos;
+F9 seleciona um comando por número; ALT+F10 limpa as definições de macros.
+
+A seguinte codificação especial ‚ usada nas definições de macros de Doskey:
+$T    Separador de comandos. Permite múltiplos comandos em uma macro.
+$1-$9 Parâmetros em lotes. Equivalente a %1-%9 nos programas em lotes.
+$*    Substituído pelo que segue o nome da macro na linha de comando.

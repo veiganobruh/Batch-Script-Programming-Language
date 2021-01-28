@@ -1,0 +1,34 @@
+Exibe o nome da pasta ou altera a pasta atual.
+
+CHDIR [/D] [unidade:][caminho]
+CHDIR[..]
+CD [/D] [unidade:][caminho]
+CD[..]
+
+  ..   Especifica que você quer ir para a pasta pai.
+
+Digite CD unidade: para exibir a pasta atual na unidade especificada.
+Digite CD sem parâmetros para exibir a unidade e pasta atuais.
+
+Use a chave /D para alterar a unidade atual e a pasta atual dentro
+desta unidade.
+
+Se as extensäes de comando estiverem ativadas, o CHDIR ser  alterado como
+a seguir:
+
+A cadeia de caracteres da pasta atual ser  convertida para usar a mesma
+diferenciação de maiúsculas e minúsculas que os nomes no disco. Portanto,
+CD C:\TEMP na verdade definiria a pasta atual como C:\Temp se estivesse assim
+no disco.
+
+O comando CHDIR não trata espaços como delimitadores, portanto ‚ possível usar
+CD para um nome de subpasta que contenha um espaço sem colocar o nome
+entre aspas. Por exemplo:
+
+    cd \winnt\profiles\username\programs\start menu
+
+‚ o mesmo que:
+
+    cd "\winnt\profiles\username\programs\start menu"
+
+que ‚ o que deveria ser digitado se as extensões estivessem desativadas.

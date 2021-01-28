@@ -1,0 +1,31 @@
+Copia um ou mais arquivos para outro local.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] origem [/A | /B]
+     [+ origem [/A | /B] [+ ...]] [destino [/A | /B]]
+
+  origem       Especifica o arquivo ou arquivos a serem copiados.
+  /A           Indica um arquivo de texto ASCII.
+  /B           Indica um arquivo binário.
+  /D           Permite que o arquivo de destino seja criado descriptografado
+  destino      Especifica o diretório e/ou nome de arquivo para os novos 
+               arquivos.
+  /V           Verifica se os novos arquivos são gravados corretamente.
+  /N           Usa um nome de arquivo curto, se disponível, ao copiar um
+               arquivo com nome que não esteja em formato 8.3.
+  /Y           Suprime o prompt para você confirmar se deseja
+               substituir um arquivo de destino existente.
+  /-Y          Exibe o prompt para você confirmar se deseja substituir
+               um arquivo de destino existente.
+  /Z           Copia arquivos de rede no modo reiniciável.
+  /L           Se a origem for um vínculo simbólico, copie o vínculo para o 
+               destino em vez do arquivo real para o qual o vínculo de origem
+               aponta.
+
+A opção /Y pode ser predefinida na variável de ambiente COPYCMD.
+Pode ser substituída por /-Y na linha de comando. O padrão ‚ solicitar 
+durante a substituição, a menos que o comando COPY esteja sendo executado 
+a partir de um script em lote.
+
+Para acrescentar arquivos, especifique um único arquivo para destino,
+mas vários arquivos para origem (usando caracteres curinga ou o formato 
+arquivo1+arquivo2+arquivo3).

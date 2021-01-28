@@ -1,0 +1,24 @@
+Cria uma pasta.
+
+MKDIR [unidade:]caminho
+MD [unidade:]caminho
+
+Se as extensäes de comando estiverem ativadas, MKDIR ser  alterado como
+a seguir:
+
+MKDIR cria quaisquer pastas intermediárias no caminho, se necessário.
+Por exemplo, se \a não existisse:
+
+    mkdir \a\b\c\d
+
+seria o mesmo que:
+
+    mkdir \a
+    chdir \a
+    mkdir b
+    chdir b
+    mkdir c
+    chdir c
+    mkdir d
+
+que seria o que você teria de digitar se as extensäes estivessem desativadas.
